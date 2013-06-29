@@ -1,13 +1,15 @@
 <% if user_signed_in? %>
 	<tr>
-	<td><%= photo.description %></td>
-	<td><%= link_to 'Show', photo %></td>
-	<td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-	<td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><%= image_tag photo.image(:medium) %></td>
+		<td><%= photo.description %></td>
+		<td><%= link_to 'Show', photo %></td>
+		<td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+		<td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	</tr>
 <% else %>
 	<tr>
-	<td><%= photo.description %></td>
-	<td><%= link_to 'Show', photo %></td>
+		<td><%= image_tag photo.image %></td>
+		<td><%= photo.description %></td>
+		<td><%= link_to 'Show', photo %></td>
 	</tr>
 <% end %>

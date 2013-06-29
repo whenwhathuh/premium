@@ -1,6 +1,7 @@
 <div class="row">
 	<div class="span6 offset3">
 		<div class="well">
+			<%= image_tag @photo.image %>
 			<p>
 			  <%= @photo.description %>
 			  <%= link_to 'Edit', edit_photo_path(@photo) %> |
