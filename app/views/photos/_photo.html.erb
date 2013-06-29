@@ -1,15 +1,17 @@
 <% if user_signed_in? %>
-	<tr>
-		<td><%= image_tag photo.image(:medium) %></td>
-		<td><%= photo.description %></td>
-		<td><%= link_to 'Show', photo %></td>
-		<td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-		<td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	</tr>
+	<div class="box">
+		<%= link_to (image_tag photo.image(:medium)), photo %>
+		<%= photo.description %>
+		<%= link_to 'Show', photo %>
+		<%= link_to 'Edit', edit_photo_path(photo) %>
+		<%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
 <% else %>
-	<tr>
-		<td><%= image_tag photo.image %></td>
-		<td><%= photo.description %></td>
-		<td><%= link_to 'Show', photo %></td>
-	</tr>
+	<div class="box">
+		<%= link_to (image_tag photo.image(:medium)), photo %>
+		<p class="description">
+			<%= photo.description %>
+		</p>
+		
+	</div>
 <% end %>
