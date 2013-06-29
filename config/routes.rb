@@ -1,9 +1,16 @@
 Premium::Application.routes.draw do
   
+  resources :photos
+
+
   devise_for :users
 
   root :to => 'pages#home'
   get 'about' => 'pages#about'
+  get 'contact' => 'pages#contact'
+  get 'gallery' => 'pages#gallery'
+  get 'design' => 'pages#design'
+  get 'shop' => 'pages#shop'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

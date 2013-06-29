@@ -1,0 +1,20 @@
+<h1>Listing photos</h1>
+
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @photo %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Photo', new_photo_path %>
