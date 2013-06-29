@@ -1,8 +1,6 @@
 Premium::Application.routes.draw do
   
   resources :photos
-
-
   devise_for :users
 
   root :to => 'pages#home'
