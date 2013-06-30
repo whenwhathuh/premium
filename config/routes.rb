@@ -1,5 +1,8 @@
 Premium::Application.routes.draw do
   
+  resources :albums
+
+
   resources :photos
   devise_for :users
 
